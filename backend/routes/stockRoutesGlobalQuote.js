@@ -1,10 +1,10 @@
 const express = require('express');
 const axios = require('axios');
-const router = express.Router(); // ✅ This line is missing
-const { protect } = require('../middleware/authMiddleware');
+const router = express.Router(); 
+//const { protect } = require('../middleware/authMiddleware');
 
 
-router.get('/quote/:symbol',protect,  async (req, res) => {
+router.get('/quote/:symbol',  async (req, res) => {
   const { symbol } = req.params;
 
   try {
@@ -40,5 +40,9 @@ router.get('/quote/:symbol',protect,  async (req, res) => {
     console.error(err);
     res.status(500).json({ error: 'Failed to fetch current stock quote' });
   }
+
+
 });
+
+
   module.exports = router;

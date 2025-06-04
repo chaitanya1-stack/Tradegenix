@@ -8,6 +8,6 @@ router.get('/me', protect, (req, res) => {
 });
 
 router.post('/register', registerUser);
-router.post('/login', loginUser);
+router.post('/', loginUser);
 
 module.exports = router;
