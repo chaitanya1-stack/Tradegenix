@@ -85,7 +85,7 @@ const SearchBar = ({ onResult }) => {
 
       <div className="theme-toggle">
     <button className="emoji-toggle" onClick={toggleTheme}>
-    {darkMode ? <i className="bi bi-moon-fill " ></i> : <i className="bi bi-brightness-high-fill"></i>} 
+    {darkMode ? <i className=" bi-brightness-high-fill " ></i> : <i className="bi bi bi-moon-fill"></i>} 
     </button>
     </div>
 
