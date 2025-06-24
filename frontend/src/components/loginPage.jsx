@@ -38,7 +38,7 @@ function LoginPage() {
         hideProgressBar: false,
         pauseOnHover: true,
         draggable: true,
-        onClose: () => navigate('/dashboard'),
+        onClose: () => navigate('/searchbar'),
       });
 
       

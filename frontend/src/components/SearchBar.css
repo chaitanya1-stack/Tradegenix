@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'Humane-Bold';
+  src: url('../assets/Humane-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Set full-page background */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.completediv {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
+.input-button-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.animated-input {
+  flex: 1;
+  height: 60px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: #366bbe;
+  box-shadow: 0 0 0 2px #333 inset;
+  outline: none;
+   border: 0.5mm solid #366bbe;
+    box-shadow:
+    0 0 5px #366bbe,
+    0 0 100px #366bbe,
+    0 0 15px #366bbe,
+    inset 0 0 5px #333;
+}
+
+.button {
+  background-color: #366bbe;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.inline-button {
+  height: 60px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+}
+
+.symbol{
+    margin-top: 45px;
+    color: whitesmoke;
+}
+
+.clickhere{
+    color:  #366bbe;
+     
+}
+.symbol-helper-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.logoutbutton{
+  position: absolute;
+  top: 1.2rem;
+  right: 5rem;
+  background-color: #366bbe;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutbutton:hover {
+  background-color: #2d5cad;
+}
+
+.logo1{position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+
+}
+
+.tradegenix1{
+    font-family: 'Humane-Bold', sans-serif;
+    font-size: 3rem;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    
+}
+.dot1{
+     color:	#366bbe;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.emoji-toggle {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  outline: none;
+  
+}
+
+
+.bi-moon-fill{
+   color: #366bbe;
+  
+}
+.bi-brightness-high-fill{
+     color:white;
+}
+/* Optional: Animate on click */
+.emoji-toggle:active {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+
+/* 🌞 Light Mode Overrides */
+
+body.light-mode {
+  background-color: #BDBDBD;
+  color: #111;
+}
+
+body.light-mode .completediv {
+  background-color: transparent;
+  color: #111;
+}
+
+body.light-mode .animated-input {
+  background-color: #fff;
+  color: #222;
+  border: 0.5mm solid #366bbe;
+  box-shadow:
+    0 0 50px #366bbe,
+    0 0 80px #366bbe,
+    0 0 100px #366bbe,
+    inset 0 0 5px #aaa;
+}
+
+body.light-mode .inline-button {
+  background-color: #366bbe;
+  color: white;
+}
+
+
+
+/* optional: style the placeholder too */
+body.light-mode .animated-input::placeholder {
+  color: #555;
+}

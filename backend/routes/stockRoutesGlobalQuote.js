@@ -1,11 +1,12 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router(); 
-//const { protect } = require('../middleware/authMiddleware');
+const { protect } = require('../middleware/authMiddleware');
 
 
-router.get('/quote/:symbol',  async (req, res) => {
+router.get('/quote/:symbol',protect,  async (req, res) => {
   const { symbol } = req.params;
+  
 
   try {
     const response = await axios.get('https://www.alphavantage.co/query', {
@@ -43,6 +44,10 @@ router.get('/quote/:symbol',  async (req, res) => {
 
 
 });
+
+
+
+
 
 
   module.exports = router;

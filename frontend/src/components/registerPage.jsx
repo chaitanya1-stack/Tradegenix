@@ -93,7 +93,7 @@ function RegisterPage() {
           </Link>
         </div>
       </div>
-      
+
       </form>
     </div>
 
