@@ -5,6 +5,8 @@ import RegisterPage from './components/registerPage';
 import LoginPage from './components/loginPage';
 import SearchBar from './components/SearchBar';
 import StockResult from './components/StockResult';
+import LoadingAnimation from './components/ LoadingAnimation';
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,6 +28,9 @@ function App() {
         <Route path="/" element={<LoginPage />} />
          <Route path="/searchbar" element={<SearchBar />} />
          <Route path="/stock/:symbol" element={<StockResult />} />
+          <Route path="/loadingpage" element={<LoadingAnimation />} />
+         
+
         
       
       </Routes>
