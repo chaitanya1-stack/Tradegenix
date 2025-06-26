@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import LoadingAnimation from './ LoadingAnimation.jsx'; // adjust path if needed
+import LoadingAnimation from './ LoadingAnimation.jsx';
+import { useNavigate } from 'react-router-dom';
+import HistoricalData from './historicalData.jsx';
+
+
 
 import api from '../api';
 import './StockResult.css';
@@ -10,6 +14,7 @@ const StockResult = () => {
   const [stock, setStock] = useState(null);
   const [overview, setOverview] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuote = async () => {
@@ -35,7 +40,7 @@ const StockResult = () => {
     fetchQuote();
     fetchOverview();
   }, [symbol]);
-if (loading) return <LoadingAnimation />;
+if (loading) return < LoadingAnimation />;
 
 
   return stock ? (
@@ -115,34 +120,8 @@ if (loading) return <LoadingAnimation />;
       </div>
        
       < div className="secondarycard22">
-      <a
-       href="/historical" // or your desired route
-       target="_blank"
-       rel="noopener noreferrer"
-       style={{ textDecoration: 'none', color: 'inherit' }}
->
-      <div className="chartdiv">
-      <i className="bi bi-graph-up-arrow"></i>
-      <div className="chart">Click here To Get Historical Data.</div>
-     </div>
-     </a>
-
-      <div className="otherlinksheaderdiv">
-        <div className="otherlinksheader">Related Links You May Like.</div>
-        <div className="otherlink1"> <i class="bi bi-bar-chart-steps"></i><div className="liks">Stock Market Basics And Trading Terminologies.</div> </div>
-         <div className="otherlink1"><i class="bi bi-newspaper"></i> <div className="liks">company specific news.</div> </div>
-          <div className="otherlink1"><i class="bi bi-exclamation-square-fill"></i> <div className="liks">How to Read Stock Data.</div></div>
-           <div className="otherlink1"><i class="bi bi-display"></i> <a
-                       href={overview.weburl}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       style={{ textDecoration: 'none', color: '#366bbe' }} 
-  >                     <div className="liks">Go To {overview.name} Website.</div>
-                      
-                      </a></div>
-            
-             </div>
-      
+     
+       <HistoricalData/>
       </div>
       </div>
       </div>

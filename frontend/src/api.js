@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://tradegenix-bhkm.onrender.com/api';  
+const API_URL = 'http://localhost:5500/api';  
 
 // Create axios instance
 const api = axios.create({
