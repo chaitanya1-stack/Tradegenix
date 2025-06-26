@@ -1,7 +1,7 @@
 // src/historicalApi.js
 import axios from 'axios';
 
-const HISTORICAL_API_URL = 'http://localhost:5600/api';
+const HISTORICAL_API_URL = 'https://tradegenix-backend2.onrender.com/api';
 
 const historicalapi = axios.create({
   baseURL: HISTORICAL_API_URL,
